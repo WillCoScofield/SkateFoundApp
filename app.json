@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "SkateFoundApp",
-    "description": "http://theskatefoundation.org/ App built using ReactNative.js and Expo. ",
+    "description": "http://theskatefoundation.org/ App built using ReactNative.js and Expo. Republish test. ",
     "slug": "SkateFoundApp",
     "privacy": "public",
     "sdkVersion": "30.0.0",
@@ -11,9 +11,9 @@
     ],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./src/img/logo.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./src/img/logo.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
