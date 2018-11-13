@@ -5,13 +5,13 @@
     "slug": "SkateFoundApp",
     "privacy": "public",
     "sdkVersion": "30.0.0",
-    "platforms": [
-      "ios",
-      "android"
-    ],
+    "platforms": ["ios", "android"],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./src/img/iconLogoResize.png",
+    "icon": { 
+      "image": "./src/img/iconLogoResize.png",
+      "backgroundColor": "#ffffff"   
+    },
     "splash": {
       "image": "./src/img/logo.png",
       "resizeMode": "contain",
@@ -20,9 +20,7 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
