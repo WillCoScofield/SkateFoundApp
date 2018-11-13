@@ -11,7 +11,7 @@
     ],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./src/img/logo.png",
+    "icon": "./src/img/iconLogoResize.png",
     "splash": {
       "image": "./src/img/logo.png",
       "resizeMode": "contain",

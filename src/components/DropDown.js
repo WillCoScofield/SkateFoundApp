@@ -21,7 +21,7 @@ class DropDown extends React.Component {
 
   showMenu = () => {
     this._menu.show();
-    console.log(this._menu);
+    // console.log(this._menu);
   };
 
   render() {
@@ -59,7 +59,7 @@ class DropDown extends React.Component {
           <MenuItem
             style={playItem}
             onPress={() => this.changeScreen("playhouse")}
-            onPressOut
+            
           >
             Skate/GiGi's Playhouse
           </MenuItem>

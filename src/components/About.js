@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View, Image } from "react-native";
+import { Text, View, Image, Linking } from "react-native";
 import CardSection from "./CardSection";
 import { ScrollView } from "../../node_modules/react-native-gesture-handler";
 import Button from "../components/Button";
@@ -90,7 +90,8 @@ const About = () => {
               how to combat early.
             </Text>
 
-            <Button style={formBut}>
+            <Button onPress={() =>
+                Linking.openURL("http://theskatefoundation.org/formula.php")}style={formBut}>
               <Text style={{ color: "white" }}>Formula21</Text>
             </Button>
           </View>
@@ -124,7 +125,10 @@ const About = () => {
               support - all for FREE in their communities.
             </Text>
 
-            <Button style={giBut}>
+            <Button
+              onPress={() => Linking.openURL("https://gigisplayhouse.org/")}
+              style={giBut}
+            >
               <Text style={{ color: "white" }}>Gigi's Playhouse</Text>
             </Button>
           </View>
@@ -138,7 +142,11 @@ const About = () => {
               Good people, willing to contribute to the outreach needed to help
               families fast.
             </Text>
-            <Button style={resBut}>
+            <Button
+              onPress={() =>
+                Linking.openURL("http://theskatefoundation.org/pdf/Apr_18_Formula21References.pdf")}
+              style={resBut}
+            >
               <Text style={{ color: "white" }}>Resources and References</Text>
             </Button>
           </View>
