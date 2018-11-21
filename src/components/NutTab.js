@@ -5,7 +5,7 @@ import Button from "./Button"
 
 
 const NutTab = () => {
-  // const { title, header, pText } = styles;
+  // const { title, header, pText, linkStyle } = styles;
 
   return (
     <View>
@@ -27,21 +27,20 @@ const NutTab = () => {
               }>www.kellydorfman.com</Text>.
       </Text>
 
-        <Button onPress={() =>
+    <Button onPress={() =>
                 Linking.openURL("http://www.kellydorfman.com/")
-              }>How Nutrition Affets Muscle Tone & Cognition</Button>
+              }>How Nutrition Affets Muscle Tone & Cognition
+    </Button>
 
-        <Button onPress={() =>
+    <Button onPress={() =>
                 Linking.openURL("http://kellydorfman.com/wp-content/uploads/2014/11/Piracetam-A_Powerful_Tool_for_Learning_Disabilities.pdf")
-              }>A Powerful Tool for Learning Disabilities and Dyspraxia</Button>
+              }>A Powerful Tool for Learning Disabilities and Dyspraxia
+    </Button>
 
-        <Button onPress={() =>
+    <Button onPress={() =>
                 Linking.openURL("http://kellydorfman.com/wp-content/uploads/2014/11/Improving_Cognitive_Functioning.pdf")
-              }>Improving Cognitive Functioning with Nutrient Therapy</Button>
-
-
-
-
+              }>Improving Cognitive Functioning with Nutrient Therapy
+    </Button>
      
     </View>
   );
