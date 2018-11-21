@@ -4,17 +4,20 @@ import { ScrollView } from "../../node_modules/react-native-gesture-handler";
 import CardSection from "../components/CardSection";
 import Button from "../components/Button";
 import Footer from "../components/Footer";
+import NutTab from "./NutTab";
+import OralTab from "./OralTab";
+import HypTab from "./HypTab";
+import SensTab from "./SensTab";
+import OxTab from "./OxTab";
 
 class Formula21 extends React.Component {
   constructor(props) {
     super(props);
-
-    this.onButtonPress = this.onButtonPress.bind(this);
-    this.state = {
-      butPressed: null,
-      backgroundColor: ""
-    };
   }
+
+  state = {
+    currentTab: null
+  };
 
   setButRef = ref => {
     this.butPressed = ref;
@@ -22,17 +25,26 @@ class Formula21 extends React.Component {
 
   //changeButtBackgroundColor function?
 
+  changeTab = currentTab => {
+    this.setState({
+      currentTab: currentTab
+    });
+  };
 
-
-  onButtonPress() {
-    console.log(`button pressed.`);
-    console.log(this.butPressed);
-    this.setState({ backgroundColor: "gray" });
-    console.log(this.state.backgroundColor);
-    // switch case based on data-butt
-    // "if hypo" make background different color, and fill dynamic content sec with hypo info
-    // "if other but" decolorize previous Button, and fill dyn cont sec with that but info
-  }
+  renderComponent = () => {
+    const { currentTab } = this.state;
+    if (currentTab === "tab1") {
+      return <OxTab />;
+    } else if (currentTab === "tab2") {
+      return <HypTab />;
+    } else if (currentTab === "tab3") {
+      return <OralTab />;
+    } else if (currentTab === "tab4") {
+      return <SensTab />;
+    } else if (currentTab === "tab5") {
+      return <NutTab />;
+    }
+  };
 
   render() {
     const {
@@ -127,35 +139,35 @@ class Formula21 extends React.Component {
           <View style={sec3Cont}>
             <Button
               data-button="oxLoBut"
-              onPress={this.onButtonPress}
+              onPress={this.changeTab.bind(null, "tab1")}
               style={sec3But}
             >
               Oxygen Loss
             </Button>
             <Button
               data-button="hypBut"
-              onPress={this.onButtonPress}
+              onPress={this.changeTab.bind(null, "tab2")}
               style={sec3But}
             >
               Hypotonia
             </Button>
             <Button
               data-button="orMoBut"
-              onPress={this.onButtonPress}
+              onPress={this.changeTab.bind(null, "tab3")}
               style={sec3But}
             >
               Oral Motor Skills
             </Button>
             <Button
               data-button="senWakBut"
-              onPress={this.onButtonPress}
+              onPress={this.changeTab.bind(null, "tab4")}
               style={sec3But}
             >
               Sensory Wake Up
             </Button>
             <Button
               data-button="nutBut"
-              onPress={this.onButtonPress}
+              onPress={this.changeTab.bind(null, "tab5")}
               style={sec3But}
             >
               Nutrition
@@ -164,9 +176,7 @@ class Formula21 extends React.Component {
         </CardSection>
 
         <CardSection>
-          <Text>
-            dynamic content creation space based on above button click
-          </Text>
+          <Text>{this.renderComponent()}</Text>
         </CardSection>
 
         <CardSection>
