@@ -12,7 +12,7 @@ import Formula21 from "./src/components/Formula21";
 
 export default class App extends React.Component {
   state = {
-    currentScreen: "about"
+    currentScreen: "formula21"
   };
 
   changeScreen = screenName => {

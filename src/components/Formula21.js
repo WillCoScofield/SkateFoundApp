@@ -46,6 +46,7 @@ class Formula21 extends React.Component {
 
   render() {
     const {
+      dynCont,
       imageStyle,
       sec1Cont,
       linkStyle,
@@ -133,7 +134,7 @@ class Formula21 extends React.Component {
           </View>
         </CardSection>
 
-        <CardSection>
+        <CardSection style={dynCont}>
           <View style={sec3Cont}>
             <Button
               data-button="oxLoBut"

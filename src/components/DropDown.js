@@ -25,14 +25,7 @@ class DropDown extends React.Component {
   };
 
   render() {
-    const {
-      abtItem,
-      formItem,
-      playItem,
-      resItem,
-      viewStyle,
-      imageStyle
-    } = styles;
+    const { abtItem, formItem, playItem, resItem, viewStyle } = styles;
     const { changeScreen } = this.props;
 
     return (
@@ -48,10 +41,7 @@ class DropDown extends React.Component {
           ref={this.setMenuRef}
           button={
             <TouchableOpacity onPress={this.showMenu}>
-              <Image
-                style={imageStyle}
-                source={require("../img/menuButton.png")}
-              />
+              <Image source={require("../img/menuButton.png")} />
             </TouchableOpacity>
           }
         >
@@ -109,13 +99,6 @@ const styles = {
   },
   resItem: {
     backgroundColor: "#ed5395"
-  },
-  imageStyle: {
-    backgroundColor: "white",
-    elevate: 2,
-    margin: 5,
-    borderWidth: 0.1,
-    borderColor: "black"
   }
 };
 

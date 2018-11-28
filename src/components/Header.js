@@ -6,16 +6,16 @@ import { TouchableOpacity, View, Image } from "react-native";
 import Button from "./Button";
 import DropDown from "./DropDown";
 
-// image
-import Logo from "../img/menuButton.png";
-
 const Header = props => {
   const { imageStyle, viewStyle, dropStyle } = styles;
 
   return (
     <View style={viewStyle}>
       <TouchableOpacity onPress={() => props.changeScreen("about")}>
-        <Image style={imageStyle} source={require("../img/logo.png")} />
+        <Image
+          style={imageStyle}
+          source={require("../img/logoWHITEblackshadow.png")}
+        />
       </TouchableOpacity>
       <DropDown style={dropStyle} changeScreen={props.changeScreen} />
     </View>
@@ -28,7 +28,7 @@ const styles = {
   },
   imageStyle: {
     height: 110,
-    width: 50,
+    width: 58,
     resizeMode: "contain"
   },
   viewStyle: {
@@ -42,9 +42,7 @@ const styles = {
     position: "relative",
     paddingLeft: 5
   },
-  dropStyle:{
-      
-  }
+  dropStyle: {}
 };
 
 export default Header;
