@@ -58,7 +58,8 @@ const About = () => {
           <View style={missionStateContainer}>
             <Text style={mPTitle}>Our Mission</Text>
             <Text style={mPtext}>
-              {"\t"} To redirect a baby born with T21 from a life of mediocrity,
+              {"\t"} 
+              To redirect a baby born with T21 from a life of mediocrity,
               to a normal and independent one.
             </Text>
             <Text style={mPtext}>
@@ -84,7 +85,8 @@ const About = () => {
               {"\n"}
             </Text>
             <Text>
-              {"\t"} Until now there hasn’t been a composite summary that
+              {"\t"} 
+              Until now there hasn’t been a composite summary that
               profiles the obstacles that T21 presents. Families can reference
               formula21 for a first glance at how T21 effects their baby, and
               how to combat early.

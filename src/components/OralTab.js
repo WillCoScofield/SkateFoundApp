@@ -1,6 +1,7 @@
 import React from "react";
 import { Text, View } from "react-native";
 import CardSection from "./CardSection";
+import Button from "./Button";
 
 const OralTab = () => {
   // const { title, header, pText } = styles;

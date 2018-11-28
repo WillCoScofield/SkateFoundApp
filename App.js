@@ -3,8 +3,6 @@ import { ScrollView, View, Text } from "react-native";
 
 // components
 import Header from "./src/components/Header";
-import Card from "./src/components/Card";
-import ContentSection from "./src/components/ContentSection";
 import About from "./src/components/About";
 import Playhouse from "./src/components/Playhouse";
 import Resources from "./src/components/Resources";

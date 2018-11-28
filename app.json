@@ -11,9 +11,9 @@
     ],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./src/img/iconLogoResize.png",
+    "icon": "./src/img/logoIDKlit.png",
     "splash": {
-      "image": "./src/img/logo.png",
+      "image": "./src/img/logoIDKlit.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },

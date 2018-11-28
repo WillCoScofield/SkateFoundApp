@@ -3,9 +3,9 @@ import { Text, View } from "react-native";
 import CardSection from "./CardSection";
 
 const OxTab = () => {
-  // const { title, header, pText } = styles;
-
   return (
+    
+    // const { title, header, pText } = styles;
     <View>
       <Text>
         A sleep study is needed early in the life of a child with T21.

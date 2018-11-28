@@ -4,11 +4,11 @@ import { ScrollView } from "../../node_modules/react-native-gesture-handler";
 import CardSection from "../components/CardSection";
 import Button from "../components/Button";
 import Footer from "../components/Footer";
-import NutTab from "./NutTab";
-import OralTab from "./OralTab";
-import HypTab from "./HypTab";
-import SensTab from "./SensTab";
-import OxTab from "./OxTab";
+import NutTab from "../components/NutTab";
+import OralTab from "../components/OralTab";
+import HypTab from "../components/HypTab";
+import SensTab from "../components/SensTab";
+import OxTab from "../components/OxTab";
 
 class Formula21 extends React.Component {
   constructor(props) {
@@ -22,8 +22,6 @@ class Formula21 extends React.Component {
   setButRef = ref => {
     this.butPressed = ref;
   };
-
-  //changeButtBackgroundColor function?
 
   changeTab = currentTab => {
     this.setState({
@@ -50,7 +48,6 @@ class Formula21 extends React.Component {
     const {
       imageStyle,
       sec1Cont,
-      textStyle,
       linkStyle,
       linkContain,
       sec3Cont,
@@ -85,7 +82,8 @@ class Formula21 extends React.Component {
               issues they need to overcome, and how to tackle them. Each of the
               identified issues and their related therapies can be woven into
               daily routines, playtime and normal loving time spent as with any
-              baby. {"\n"}
+              baby.
+              {"\n"}
             </Text>
 
             <Text>
@@ -175,9 +173,7 @@ class Formula21 extends React.Component {
           </View>
         </CardSection>
 
-        <CardSection>
-          <Text>{this.renderComponent()}</Text>
-        </CardSection>
+        <CardSection>{this.renderComponent()}</CardSection>
 
         <CardSection>
           <View style={linkContain}>
