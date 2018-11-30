@@ -196,7 +196,8 @@ const styles = {
     fontSize: 20,
     justifyContent: "center",
     alignItems: "center",
-    padding: 5
+    padding: 5,
+    fontWeight: 'bold',
   },
 
   titleText: {

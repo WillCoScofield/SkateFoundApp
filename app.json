@@ -11,11 +11,11 @@
     ],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./src/img/logoIDKlit.png",
+    "icon": "./src/img/logoWHITEblackshadow.png",
     "splash": {
-      "image": "./src/img/logoIDKlit.png",
+      "image": "./src/img/logoWHITEblackshadow.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#000000"
     },
     "updates": {
       "fallbackToCacheTimeout": 0

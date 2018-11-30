@@ -99,13 +99,17 @@ class Formula21 extends React.Component {
               at all possible for parents to detect obstructive sleep apnea at
               home. Snoring may or may not present as a symptom due to a variety
               of predisposed factors from anatomic variances, and smaller airway
-              sizes are a predominant contributor overall. The good news is once
-              detected, the source of the sleep obstruction can be addressed,
-              the most common being tonsil or adenoid adjustment. To reduce
-              contributing factors directly due to global low tone, oral motor,
-              occupational and physical therapies early are definitely pivotal.
-              In summary early detection through an overnight sleep apnea test
-              and continued testing is key. {"\n"}
+              sizes are a predominant contributor overall.
+              {"\n"}
+            </Text>
+
+            <Text>
+              {"\t"} The good news is once detected, the source of the sleep
+              obstruction can be addressed, the most common being tonsil or
+              adenoid adjustment. To reduce contributing factors directly due to
+              global low tone, oral motor, occupational and physical therapies
+              early are definitely pivotal. In summary early detection through
+              an overnight sleep apnea test and continued testing is key. {"\n"}
             </Text>
 
             <Text>
@@ -238,7 +242,7 @@ const styles = {
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    padding: 5
+    margin: 8
   },
 
   sec2Cont: {
@@ -260,7 +264,9 @@ const styles = {
     textDecorationLine: "underline"
   },
 
-  sec3But: {},
+  sec3But: {
+    elevate: 3
+  },
 
   sec3Cont: {
     flex: 1,
@@ -275,13 +281,11 @@ const styles = {
     height: 110,
 
     resizeMode: "contain"
-    // borderWidth: 1,
-    // borderColor: "black"
+
   },
   sec1: {},
 
   linkContain: {
-    //   display: 'flex',
     flex: 1,
     flexDirection: "row",
     justifyContent: "space-evenly",

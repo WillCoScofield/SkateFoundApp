@@ -75,12 +75,12 @@ const styles = {
   viewStyle: {
     flex: 1,
     flexDirection: "column",
-    
+    alignItems: "center"
   },
   title: {
     fontSize: 18,
-    margin: 15, 
-
+    margin: 15,
+    fontWeight: "bold"
   },
 
   header: {
@@ -89,7 +89,9 @@ const styles = {
   },
 
   pText: {
-    margin: 6
+    margin: 6,
+    paddingLeft: 2,
+    paddingRight: 2
   }
 };
 

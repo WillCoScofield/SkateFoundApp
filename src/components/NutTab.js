@@ -4,16 +4,18 @@ import CardSection from "./CardSection";
 import Button from "./Button";
 
 const NutTab = () => {
-  // const { title, header, pText, linkStyle } = styles;
+  const { title, pText, linkStyle, viewStyle, butStyle, butText } = styles;
 
   return (
-    <View>
-      <Text>
+    <View style={viewStyle}>
+      <Text style={title}>
+        {"\t"}
         Life shouldn’t be toxic. Our babies are born with known nutritional
         deficiencies, many of them learning enablers.
       </Text>
 
-      <Text>
+      <Text style={pText}>
+        {"\t"}
         Countless and uncontested proof states the merits of a strong
         nutritional foundation for any child. Research is able to directly link
         certain nutrients to the strengthening of brain and eye health as well
@@ -25,53 +27,91 @@ const NutTab = () => {
         to reduce inflammation, congestion and toxins.
       </Text>
 
-      <Text>
+      <Text style={pText}>
+        {"\t"}
         We look forward to a day when conventional medicine addresses this very
         important challenge for our community. Until then contacting a
         nutritionist with this type of expertise is great risk-free step in
         raising our children’s global health.
       </Text>
 
-      <Text>
-        A great reference for understanding the many different approaches to
-        nutritional excellence is
-        <Text onPress={() => Linking.openURL("http://www.kellydorfman.com/")}>
+      <Text style={pText}>
+        {"\t"}
+        A great reference for understanding the many different approaches
+        to nutritional excellence is{" "}
+        <Text
+          style={linkStyle}
+          onPress={() => Linking.openURL("http://www.kellydorfman.com/")}
+        >
           www.kellydorfman.com
         </Text>
+        .
       </Text>
 
-      <Button onPress={() => Linking.openURL("http://www.kellydorfman.com/")}>
-        How Nutrition Affets Muscle Tone & Cognition
+      <Button
+        style={butStyle}
+        onPress={() => Linking.openURL("http://www.kellydorfman.com/")}
+      >
+        <Text style={butText}>
+          How Nutrition Affects Muscle Tone & Cognition
+        </Text>
       </Button>
 
       <Button
+        style={butStyle}
         onPress={() =>
           Linking.openURL(
             "http://kellydorfman.com/wp-content/uploads/2014/11/Piracetam-A_Powerful_Tool_for_Learning_Disabilities.pdf"
           )
         }
       >
-        A Powerful Tool for Learning Disabilities and Dyspraxia
+        <Text style={butText}>
+          A Powerful Tool for Learning Disabilities and Dyspraxia
+        </Text>
       </Button>
 
       <Button
+        style={butStyle}
         onPress={() =>
           Linking.openURL(
             "http://kellydorfman.com/wp-content/uploads/2014/11/Improving_Cognitive_Functioning.pdf"
           )
         }
       >
-        Improving Cognitive Functioning with Nutrient Therapy
+        <Text style={butText}>
+          Improving Cognitive Functioning with Nutrient Therapy
+        </Text>
       </Button>
     </View>
   );
 };
 
-// const styles = {
-//   title: {},
-//   header: {},
-//   pText: {}
-//   linkStyle: {}
-// };
+const styles = {
+  butText: {
+    color: "white"
+  },
+  viewStyle: {
+    flex: 1,
+    flexDirection: "column",
+    alignItems: "center"
+  },
+  title: {
+    fontSize: 20,
+    margin: 10,
+    fontWeight: "bold"
+  },
+  pText: {
+    margin: 6,
+    paddingLeft: 2,
+    paddingRight: 2
+  },
+  linkStyle: {
+    color: "blue"
+  },
+  butStyle: {
+    backgroundColor: "#ffb326",
+    margin: 10
+  }
+};
 
 export default NutTab;
