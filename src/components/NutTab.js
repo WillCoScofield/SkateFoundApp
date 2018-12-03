@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View } from "react-native";
+import { Text, View, Linking } from "react-native";
 import CardSection from "./CardSection";
 import Button from "./Button";
 
@@ -36,8 +36,7 @@ const NutTab = () => {
       </Text>
 
       <Text style={pText}>
-        {"\t"}
-        A great reference for understanding the many different approaches
+        {"\t"}A great reference for understanding the many different approaches
         to nutritional excellence is{" "}
         <Text
           style={linkStyle}
@@ -50,7 +49,11 @@ const NutTab = () => {
 
       <Button
         style={butStyle}
-        onPress={() => Linking.openURL("http://www.kellydorfman.com/")}
+        onPress={() =>
+          Linking.openURL(
+            "http://kellydorfman.com/wp-content/uploads/2014/11/Low_Muscle_Tone.pdf"
+          )
+        }
       >
         <Text style={butText}>
           How Nutrition Affects Muscle Tone & Cognition

@@ -1,3 +1,4 @@
+<script src="http://10.136.19.176:8097"></script>
 import React from "react";
 import { ScrollView, View, Text } from "react-native";
 

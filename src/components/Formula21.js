@@ -1,5 +1,6 @@
+<script src="http://10.136.19.176:8097" />;
 import React from "react";
-import { View, Text, Image, Linking } from "react-native";
+import { View, Text, Image, Linking, Dimensions, Platform } from "react-native";
 import { ScrollView } from "../../node_modules/react-native-gesture-handler";
 import CardSection from "../components/CardSection";
 import Button from "../components/Button";
@@ -9,6 +10,10 @@ import OralTab from "../components/OralTab";
 import HypTab from "../components/HypTab";
 import SensTab from "../components/SensTab";
 import OxTab from "../components/OxTab";
+import { NavButton } from "../components/Buttons";
+
+//global variables
+let scrollYPos = 0;
 
 class Formula21 extends React.Component {
   constructor(props) {
@@ -16,16 +21,17 @@ class Formula21 extends React.Component {
   }
 
   state = {
-    currentTab: null
+    currentTab: null,
+    active: false,
+    screenHeight: Dimensions.get("window").height,
+    screenWidth: Dimensions.get("window").width
   };
 
-  setButRef = ref => {
-    this.butPressed = ref;
-  };
-
-  changeTab = currentTab => {
+  changeTab = tab => {
+    // scrollYPos = this.state.screenHeight * 2;
+    const buttonState = this.state.active;
     this.setState({
-      currentTab: currentTab
+      currentTab: tab
     });
   };
 
@@ -56,11 +62,12 @@ class Formula21 extends React.Component {
       sec2Cont,
       sec2Text,
       sec2Title,
-      paraCont
+      paraCont,
+      activeButton
     } = styles;
 
     return (
-      <ScrollView>
+      <ScrollView ref={c => (this.myRef = c)}>
         <CardSection>
           <View style={sec1Cont}>
             <Image
@@ -140,41 +147,45 @@ class Formula21 extends React.Component {
 
         <CardSection style={dynCont}>
           <View style={sec3Cont}>
-            <Button
+            <NavButton
+              isActive={this.state.currentTab === "tab1"}
               data-button="oxLoBut"
               onPress={this.changeTab.bind(null, "tab1")}
-              style={sec3But}
             >
               Oxygen Loss
-            </Button>
-            <Button
+            </NavButton>
+
+            <NavButton
+              isActive={this.state.currentTab === "tab2"}
               data-button="hypBut"
               onPress={this.changeTab.bind(null, "tab2")}
-              style={sec3But}
             >
               Hypotonia
-            </Button>
-            <Button
+            </NavButton>
+
+            <NavButton
+              isActive={this.state.currentTab === "tab3"}
               data-button="orMoBut"
               onPress={this.changeTab.bind(null, "tab3")}
-              style={sec3But}
             >
               Oral Motor Skills
-            </Button>
-            <Button
+            </NavButton>
+
+            <NavButton
+              isActive={this.state.currentTab === "tab4"}
               data-button="senWakBut"
               onPress={this.changeTab.bind(null, "tab4")}
-              style={sec3But}
             >
               Sensory Wake Up
-            </Button>
-            <Button
+            </NavButton>
+
+            <NavButton
+              isActive={this.state.currentTab === "tab5"}
               data-button="nutBut"
               onPress={this.changeTab.bind(null, "tab5")}
-              style={sec3But}
             >
               Nutrition
-            </Button>
+            </NavButton>
           </View>
         </CardSection>
 
@@ -264,10 +275,6 @@ const styles = {
     textDecorationLine: "underline"
   },
 
-  sec3But: {
-    elevate: 3
-  },
-
   sec3Cont: {
     flex: 1,
     flexDirection: "column",
@@ -279,9 +286,7 @@ const styles = {
 
   imageStyle: {
     height: 110,
-
     resizeMode: "contain"
-
   },
   sec1: {},
 

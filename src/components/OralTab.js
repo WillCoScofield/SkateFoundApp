@@ -4,7 +4,15 @@ import CardSection from "./CardSection";
 import Button from "./Button";
 
 const OralTab = () => {
-  const { title, header, subHeader, pText, butStyle, viewStyle } = styles;
+  const {
+    title,
+    header,
+    subHeader,
+    pText,
+    butStyle,
+    viewStyle,
+    butText
+  } = styles;
 
   return (
     <View style={viewStyle}>
@@ -98,14 +106,17 @@ const OralTab = () => {
         style={butStyle}
         onPress={() => Linking.openURL("http://www.myofunctionaltherapy.org/")}
       >
-        Myofunctional Inst.'s
+        <Text style={butText}> Myofunctional Inst.'s </Text>
       </Button>
     </View>
   );
 };
 
 const styles = {
-  viewStyle:{
+  butText: {
+    color: "white"
+  },
+  viewStyle: {
     flex: 1,
     flexDirection: "column",
     alignItems: "center"
@@ -123,18 +134,18 @@ const styles = {
     margin: 6,
     fontSize: 18,
     flex: 1,
-    flexDirection: 'column',
-    alignItems: 'center',
-    fontWeight: 'bold', 
+    flexDirection: "column",
+    alignItems: "center",
+    fontWeight: "bold"
   },
   subHeader: {
     fontWeight: "bold",
     fontSize: 15,
     margin: 6,
     flex: 1,
-    flexDirection: 'column',
-    alignItems: 'center',
-    fontWeight: 'bold', 
+    flexDirection: "column",
+    alignItems: "center",
+    fontWeight: "bold"
   },
   pText: {
     margin: 6,
