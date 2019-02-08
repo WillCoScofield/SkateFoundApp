@@ -2,7 +2,7 @@ import React from "react";
 import { Text, View, Image, Linking } from "react-native";
 import CardSection from "./CardSection";
 import { ScrollView } from "../../node_modules/react-native-gesture-handler";
-import Button from "../components/Button";
+import { Button } from "../components/Buttons";
 import Footer from "../components/Footer";
 
 const About = () => {
@@ -15,7 +15,6 @@ const About = () => {
     whoContainer,
     titleText,
     pText,
-    checkPhoto,
     mPtext,
     mPTitle,
     formBut,
@@ -46,8 +45,8 @@ const About = () => {
               style={{
                 flex: 1,
                 height: 125,
-                width: 350,
-                marginLeft: 4
+                width: 380,
+                resizeMode: "contain"
               }}
               source={require("../img/homePeopleImg.png")}
             />
@@ -58,9 +57,9 @@ const About = () => {
           <View style={missionStateContainer}>
             <Text style={mPTitle}>Our Mission</Text>
             <Text style={mPtext}>
-              {"\t"} 
-              To redirect a baby born with T21 from a life of mediocrity,
-              to a normal and independent one.
+              {"\t"}
+              To redirect a baby born with T21 from a life of mediocrity, to a
+              normal and independent one.
             </Text>
             <Text style={mPtext}>
               {"\t"}
@@ -85,15 +84,19 @@ const About = () => {
               {"\n"}
             </Text>
             <Text>
-              {"\t"} 
-              Until now there hasn’t been a composite summary that
-              profiles the obstacles that T21 presents. Families can reference
-              formula21 for a first glance at how T21 effects their baby, and
-              how to combat early.
+              {"\t"}
+              Until now there hasn’t been a composite summary that profiles the
+              obstacles that T21 presents. Families can reference formula21 for
+              a first glance at how T21 effects their baby, and how to combat
+              early.
             </Text>
 
-            <Button onPress={() =>
-                Linking.openURL("http://theskatefoundation.org/formula.php")}style={formBut}>
+            <Button
+              onPress={() =>
+                Linking.openURL("http://theskatefoundation.org/formula.php")
+              }
+              style={formBut}
+            >
               <Text style={{ color: "white" }}>Formula21</Text>
             </Button>
           </View>
@@ -146,7 +149,10 @@ const About = () => {
             </Text>
             <Button
               onPress={() =>
-                Linking.openURL("http://theskatefoundation.org/pdf/Apr_18_Formula21References.pdf")}
+                Linking.openURL(
+                  "http://theskatefoundation.org/pdf/Apr_18_Formula21References.pdf"
+                )
+              }
               style={resBut}
             >
               <Text style={{ color: "white" }}>Resources and References</Text>
@@ -186,7 +192,11 @@ const styles = {
     textDecorationLine: "underline"
   },
 
-  checkPhotoContainer: {},
+  checkPhotoContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center"
+  },
 
   checkPhoto: {
     // resizeMode: "contain"
@@ -197,7 +207,7 @@ const styles = {
     justifyContent: "center",
     alignItems: "center",
     padding: 5,
-    fontWeight: 'bold',
+    fontWeight: "bold"
   },
 
   titleText: {

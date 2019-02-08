@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "SkateFoundApp",
+    "name": "The S-Kate App",
     "description": "http://theskatefoundation.org/ App built using ReactNative.js and Expo. Republish test. ",
-    "slug": "SkateFoundApp",
+    "slug": "S-KateApp",
     "privacy": "public",
     "sdkVersion": "30.0.0",
     "platforms": [

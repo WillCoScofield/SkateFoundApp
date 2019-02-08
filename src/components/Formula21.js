@@ -1,15 +1,12 @@
-<script src="http://10.136.19.176:8097" />;
+{
+  /* <script src="http://10.136.19.176:8097" />; */
+}
 import React from "react";
-import { View, Text, Image, Linking, Dimensions, Platform } from "react-native";
+import { View, Text, Image, Linking, Dimensions } from "react-native";
 import { ScrollView } from "../../node_modules/react-native-gesture-handler";
 import CardSection from "../components/CardSection";
-import Button from "../components/Button";
 import Footer from "../components/Footer";
-import NutTab from "../components/NutTab";
-import OralTab from "../components/OralTab";
-import HypTab from "../components/HypTab";
-import SensTab from "../components/SensTab";
-import OxTab from "../components/OxTab";
+import { OxTab, SensTab, HypTab, OralTab, NutTab } from "../components/Tabs";
 import { NavButton } from "../components/Buttons";
 
 //global variables
@@ -24,15 +21,28 @@ class Formula21 extends React.Component {
     currentTab: null,
     active: false,
     screenHeight: Dimensions.get("window").height,
-    screenWidth: Dimensions.get("window").width
+    screenWidth: Dimensions.get("window").width,
+    scrollHere: null
   };
 
-  changeTab = tab => {
-    // scrollYPos = this.state.screenHeight * 2;
-    const buttonState = this.state.active;
+  changeTab = (tab, scrollHere) => {
     this.setState({
-      currentTab: tab
+      currentTab: tab,
+      screenHeight: Dimensions.get("window").height,
+      screenWidth: Dimensions.get("window").width,
+      scrollHere: scrollHere
     });
+  };
+
+  scrollToContent = () => {
+    scrollYPos = this.state.scrollHere;
+    this.scroller.scrollTo({ x: 0, y: scrollYPos, animated: true });
+    console.log("scrollTo fired");
+    console.log(this.state.screenHeight, this.state.screenWidth);
+  };
+
+  componentDidUpdate = () => {
+    this.scrollToContent();
   };
 
   renderComponent = () => {
@@ -67,7 +77,11 @@ class Formula21 extends React.Component {
     } = styles;
 
     return (
-      <ScrollView ref={c => (this.myRef = c)}>
+      <ScrollView
+        ref={scroller => {
+          this.scroller = scroller;
+        }}
+      >
         <CardSection>
           <View style={sec1Cont}>
             <Image
@@ -189,7 +203,13 @@ class Formula21 extends React.Component {
           </View>
         </CardSection>
 
-        <CardSection>{this.renderComponent()}</CardSection>
+        <CardSection
+          ref={scrollHere => {
+            this.scrollHere = scrollHere;
+          }}
+        >
+          {this.renderComponent()}
+        </CardSection>
 
         <CardSection>
           <View style={linkContain}>

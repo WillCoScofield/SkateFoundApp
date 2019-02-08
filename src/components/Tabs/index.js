@@ -1,0 +1,5 @@
+export {default as HypTab} from "../HypTab.js"
+export {default as NutTab} from "../NutTab.js"
+export {default as SensTab} from "../SensTab.js"
+export {default as OxTab} from "../OxTab.js"
+export {default as OralTab} from "../OralTab.js"

@@ -3,7 +3,7 @@ import React from "react";
 import { TouchableOpacity, View, Image } from "react-native";
 
 // components
-import Button from "./Button";
+
 import DropDown from "./DropDown";
 
 const Header = props => {
@@ -34,7 +34,8 @@ const styles = {
   viewStyle: {
     backgroundColor: "#E8E8E8",
     height: 80,
-    paddingTop: 25,
+    marginTop: 10, 
+    paddingTop:20,
     alignItems: "center",
     justifyContent: "space-between",
     flexDirection: "row",

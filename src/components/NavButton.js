@@ -23,9 +23,6 @@ const styles = {
   },
   ButtonStyle: {
     flex: 1,
-    // alignSelf: 'stretch',
-    //backgroundColor: 'green',
-    // flexWrap: 'wrap',
     borderWidth: 1,
     borderColor: "black",
     padding: 5,

@@ -1,4 +1,4 @@
-<script src="http://10.136.19.176:8097"></script>
+<script src="http://10.136.19.176:8097" />;
 import React from "react";
 import { ScrollView, View, Text } from "react-native";
 
@@ -13,7 +13,7 @@ import Formula21 from "./src/components/Formula21";
 
 export default class App extends React.Component {
   state = {
-    currentScreen: "formula21"
+    currentScreen: "about"
   };
 
   changeScreen = screenName => {
@@ -48,28 +48,3 @@ export default class App extends React.Component {
     );
   }
 }
-
-//Header
-// Logo, Title?, DropDown Menu
-
-//Each Full Width Card with different Contents
-// Adrienne Mulligan Quote 1
-// Checkerboard Photo 2
-//Mission 3
-//2 views
-//"Our Mission"
-//3 Text Tags
-//Why 4
-//2 Views
-//Column Title (Font Size) -- text under
-//Button
-//How 5
-//2 Views
-//Column Title (Font Size) -- text under
-//Button
-//Who 6
-//2 Views
-//Column Title (Font Size) -- text under
-//Button
-//Footer 7
-//Text

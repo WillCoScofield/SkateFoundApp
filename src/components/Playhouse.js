@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, Image, Linking } from "react-native";
 import { ScrollView } from "../../node_modules/react-native-gesture-handler";
 import CardSection from "../components/CardSection";
-import Button from "../components/Button";
+import {Button} from "../components/Buttons";
 import Footer from "../components/Footer";
 
 const Playhouse = () => {

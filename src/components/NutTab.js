@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, View, Linking } from "react-native";
 import CardSection from "./CardSection";
-import Button from "./Button";
+import Button from "./Buttons/Button";
 
 const NutTab = () => {
   const { title, pText, linkStyle, viewStyle, butStyle, butText } = styles;
