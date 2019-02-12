@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, View } from "react-native";
-import {Button} from "../components/Buttons";
+import {Button} from "../Buttons";
 
 const OralTab = () => {
   const {

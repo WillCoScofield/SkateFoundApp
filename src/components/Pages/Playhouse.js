@@ -1,9 +1,9 @@
 import React from "react";
 import { View, Text, Image, Linking } from "react-native";
-import { ScrollView } from "../../node_modules/react-native-gesture-handler";
-import CardSection from "../components/CardSection";
-import {Button} from "../components/Buttons";
-import Footer from "../components/Footer";
+import { ScrollView } from "react-native-gesture-handler";
+import CardSection from "../CardSection";
+import {Button} from "../Buttons";
+import Footer from "../Footer";
 
 const Playhouse = () => {
   const { sec1Cont, sec2Cont, sec3Cont, sec3Text } = styles;

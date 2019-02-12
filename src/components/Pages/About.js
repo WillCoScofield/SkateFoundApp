@@ -1,9 +1,9 @@
 import React from "react";
 import { Text, View, Image, Linking } from "react-native";
-import CardSection from "./CardSection";
-import { ScrollView } from "../../node_modules/react-native-gesture-handler";
-import { Button } from "../components/Buttons";
-import Footer from "../components/Footer";
+import CardSection from "../CardSection";
+import { ScrollView } from "react-native-gesture-handler";
+import { Button } from "../Buttons";
+import Footer from "../Footer";
 
 const About = () => {
   const {
@@ -48,7 +48,7 @@ const About = () => {
                 width: 380,
                 resizeMode: "contain"
               }}
-              source={require("../img/homePeopleImg.png")}
+              source={require("../../img/homePeopleImg.png")}
             />
           </View>
         </CardSection>

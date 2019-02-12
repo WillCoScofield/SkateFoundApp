@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, View } from "react-native";
-import CardSection from "./CardSection";
+import CardSection from "../CardSection";
 
 const OxTab = () => {
   const { viewStyle, title, header, pText } = styles;

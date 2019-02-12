@@ -4,16 +4,16 @@ import { ScrollView, View, Text } from "react-native";
 
 // components
 import Header from "./src/components/Header";
-import About from "./src/components/About";
-import Playhouse from "./src/components/Playhouse";
-import Resources from "./src/components/Resources";
-import Formula21 from "./src/components/Formula21";
+import About from "./src/components/Pages/About";
+import Playhouse from "./src/components/Pages/Playhouse";
+import Resources from "./src/components/Pages/Resources";
+import Formula21 from "./src/components/Pages/Formula21";
 
 <script src="http://localhost:8097" />;
 
 export default class App extends React.Component {
   state = {
-    currentScreen: "about"
+    currentScreen: "formula21"
   };
 
   changeScreen = screenName => {

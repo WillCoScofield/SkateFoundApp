@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, View, Linking } from "react-native";
-import CardSection from "./CardSection";
+import CardSection from "../CardSection";
 
 const SensTab = () => {
   const { viewStyle, title, pText, link, subHeader } = styles;
