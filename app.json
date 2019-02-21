@@ -1,8 +1,8 @@
 {
   "expo": {
     "name": "The SKate App",
-    "description": "http://theskatefoundation.org/ App built using ReactNative.js and Expo. Republish test. ",
-    "slug": "S-KateApp",
+    "description": "http://theskatefoundation.org/ App built using ReactNative.js and Expo. Debugging client command issues, and slug naming issues. ",
+    "slug": "The-Skate-App",
     "privacy": "public",
     "sdkVersion": "30.0.0",
     "platforms": [
@@ -23,8 +23,12 @@
     "assetBundlePatterns": [
       "**/*"
     ],
+    "android": {
+      "package": "com.TheSkateFoundation.TheSkateApp"
+    },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": false,
+      "bundleIdentifier": "com.TheSkateFoundation.TheSkateApp"
     },
     "githubUrl": "https://github.com/WillCoScofield/SkateFoundApp"
   }

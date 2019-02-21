@@ -39,6 +39,7 @@ class Formula21 extends React.Component {
     this.scroller.scrollTo({ x: 0, y: scrollYPos, animated: true });
     console.log("scrollTo fired");
     console.log(this.state.screenHeight, this.state.screenWidth);
+    //works on IOS but not on Android, I think it has to do with the fact I'm trying to scroll to a dynamically created div upon creation of it? myabe not because it's in component did update. 
   };
 
   componentDidUpdate = (prevProp, prevState) => {

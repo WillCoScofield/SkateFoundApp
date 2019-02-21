@@ -1,12 +1,13 @@
 {
-  "name": "empty-project-template",
+  "name": "The-SKate-App",
   "main": "node_modules/expo/AppEntry.js",
   "private": true,
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "publish": "expo publish"
   },
   "dependencies": {
     "expo": "^30.0.2",
