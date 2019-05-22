@@ -1,6 +1,4 @@
-{
-  /* <script src="http://10.136.19.176:8097" />; */
-}
+
 import React from "react";
 import { View, Text, Image, Linking, Dimensions } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
@@ -205,11 +203,7 @@ class Formula21 extends React.Component {
           </View>
         </CardSection>
 
-        <CardSection
-          // ref={scrollHere => {
-          //   this.scrollHere = scrollHere;
-          // }}
-        >
+        <CardSection>
           {this.renderComponent()}
         </CardSection>
 
